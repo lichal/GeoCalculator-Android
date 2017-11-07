@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.codemasters.ryancheng.cis357.Settings"
+    tools:showIn="@layout/activity_settings"
+    android:baselineAligned="false">
+
+    <RelativeLayout
+        android:id="@+id/leftHand"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/distanceUnit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="Distance Units"
+            android:textSize="20dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintTop_creator="1"
+            android:layout_marginTop="49dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            tools:ignore="HardcodedText" />
+
+        <Spinner
+            android:id="@+id/distanceSelect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/distanceUnit"
+            android:entries="@array/distance_units"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/distanceUnit"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintTop_creator="1" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rightHand"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/bearingUnit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="Bearing Units"
+            android:textSize="20dp"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintTop_creator="1"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="49dp"
+            tools:ignore="HardcodedText" />
+
+        <Spinner
+            android:id="@+id/bearingSelect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/bearing_units"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="@+id/bearingUnit"
+            app:layout_constraintRight_toRightOf="@+id/bearingUnit"
+            app:layout_constraintTop_toBottomOf="@+id/bearingUnit"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintTop_creator="1"
+            android:layout_below="@+id/bearingUnit"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
+
+</LinearLayout>
