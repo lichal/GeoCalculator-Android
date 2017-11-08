@@ -83,8 +83,8 @@ public class MainActivity extends AppCompatActivity {
 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode == ACTIVITY_SETTINGS) {
-            this.distUnit = data.getStringExtra("bearingUnits");
-            this.bearUnit = data.getStringExtra("distanceUnits");
+            this.distUnit = data.getStringExtra("distSelection");
+            this.bearUnit = data.getStringExtra("bearSelection");
             calculate();
         } else if (resultCode == HISTORY_RESULT) {
             String[] vals = data.getStringArrayExtra("item");
